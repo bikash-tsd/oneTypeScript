@@ -2,6 +2,10 @@ function addNumber(n1, n2) {
     return n1 + n2;
 }
 function printResult(num) {
-    console.log('result' + num);
+    console.log(num);
 }
-printResult(addNumber(1, 3));
+function addHandlebar(num1, num2, cb) {
+    var result = num1 + num2;
+    return cb(result);
+}
+addHandlebar(3, 4, printResult);
