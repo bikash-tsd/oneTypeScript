@@ -1,17 +1,15 @@
-function combine(input1:number | string , input2:number|string) {
+function combine(input1:number | string , input2:number|string, addType:'on-text'|'on-number') {
   let result;
-  if (typeof input1 === "number" && typeof input2 === "number" ) {
-     result =  input1 + input2;
-    
-  } else {
-    result =  input1.toString() + input2.toString();
+  if(addType==='on-text'){
+    result = input1.toString()+ input2.toString()
   }
+
+  if(addType==='on-number'){
+    result = +input1 + +input2
+  }
+  
   
   return result;
 }
 
-const combineAges = combine(2,3);
-console.log(combineAges);
 
-const combineNames = combine('anaa','Moryee');
-console.log(combineNames);
