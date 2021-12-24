@@ -5,5 +5,10 @@ const person:{
   name:"Maximilian",
   age:29
 }
+let foveateActivate:string[]; 
+foveateActivate =['football']; 
 
-console.log(person.age);
+for (const hobby of foveateActivate) {
+  console.log(hobby.toLocaleUpperCase());
+  
+}
