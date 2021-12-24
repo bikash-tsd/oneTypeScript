@@ -1,19 +1,17 @@
-enum Role { ADMIN,READONLY,AUTHOR }
-
-let person:{
-  name:string,
-  age:number,
-  role:Role
+function combine(input1:number | string , input2:number|string) {
+  let result;
+  if (typeof input1 === "number" && typeof input2 === "number" ) {
+     result =  input1 + input2;
+    
+  } else {
+    result =  input1.toString() + input2.toString();
+  }
   
-} = {
-  name:"Maximilian",
-  age:29,
-  role:Role.ADMIN
+  return result;
 }
-let foveateActivate:string[]; 
-foveateActivate =['football']; 
-person = {
-  name:"re",
-  age:21,
-  role:Role.ADMIN
-}
+
+const combineAges = combine(2,3);
+console.log(combineAges);
+
+const combineNames = combine('anaa','Moryee');
+console.log(combineNames);
