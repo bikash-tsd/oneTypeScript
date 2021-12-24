@@ -1,4 +1,6 @@
-let userInput : unknown;
-let userName : string;
+const button = document.querySelector("button");
 
-userName='54'
+button?.addEventListener('click',()=>{
+  console.log('hello');
+  
+})
