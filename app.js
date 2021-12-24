@@ -1,14 +1,10 @@
-function combine(input1, input2) {
+function combine(input1, input2, addType) {
     var result;
-    if (typeof input1 === "number" && typeof input2 === "number") {
-        result = input1 + input2;
-    }
-    else {
+    if (addType === 'on-text') {
         result = input1.toString() + input2.toString();
+    }
+    if (addType === 'on-number') {
+        result = +input1 + +input2;
     }
     return result;
 }
-var combineAges = combine(2, 3);
-console.log(combineAges);
-var combineNames = combine('anaa', 'Moryee');
-console.log(combineNames);
