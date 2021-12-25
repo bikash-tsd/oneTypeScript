@@ -24,6 +24,10 @@ class Department {
     
   }
 
+  static createEmployee(name:string){
+    return {name}
+  }
+
 }
 
 
@@ -34,5 +38,5 @@ dep.addEmployee('max');
 dep.addEmployee('dash');
 dep.printEmployee();
 dep.mostResentReport = 'test'
-console.log(dep.report);
+console.log(Department.createEmployee('max'));
 
