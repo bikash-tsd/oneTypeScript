@@ -1,34 +1,7 @@
-interface admin  {
-    name:string
-    privilege:string[]
-}
-interface employee  {
-    name:string;
-    startDate:Date;
+function merge<name,age>(objectA:name,objectB:age) {
+    return Object.assign(objectA,objectB)
 }
 
-interface Bird  {
-    flyingSpeed :number
-}
-interface Horse {
-    runningSpeed : number
-}
- 
-type Animal = Bird | Horse;
+const data =merge({data:'data'},{name:'one'});
+console.log(data);
 
-function moveAnimal(animal:Animal) {
-    if('flyingSpeed' in animal) console.log('fly'+animal.flyingSpeed );
-    if('runningSpeed' in animal) console.log('run'+animal.runningSpeed );    
-}
-
-const para = document.getElementById('test1')! as HTMLElement ;
-para.innerHTML = 'test'
-
-interface ErrorInterface {
-
-    [props:string] : string;
-}
-
-const errorBeg:ErrorInterface = {
-    error :"not a valid emil"
-}
