@@ -1,7 +1,7 @@
-function merge<name,age>(objectA:name,objectB:age) {
-    return Object.assign(objectA,objectB)
+
+
+function countAndPrint<O extends object,K extends keyof O>(object:O,key:K) {
+    return object[key]
 }
 
-const data =merge({data:'data'},{name:'one'});
-console.log(data);
-
+console.log(countAndPrint({name:'bikash'},'name'));
