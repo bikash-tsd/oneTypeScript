@@ -1,7 +1,14 @@
-
-
-function countAndPrint<O extends object,K extends keyof O>(object:O,key:K) {
-    return object[key]
+function Logger(constructor:Function) {
+    console.log('login....');
+    console.log(constructor);
+    
+}
+@Logger
+class Parson {
+    name = 'Max'
+    constructor(){
+        console.log('creating a person');
+        
+    }
 }
 
-console.log(countAndPrint({name:'bikash'},'name'));
