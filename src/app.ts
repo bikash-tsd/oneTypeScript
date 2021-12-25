@@ -21,3 +21,14 @@ const person = {
 const copyPerson = {...person};
 console.log(copyPerson);
 
+const addNumber = (...numbers:number[])=>{
+  const sum =numbers.reduce((currentValue,reduceValue)=>{
+    return currentValue+reduceValue
+  },0);
+  return sum
+  
+
+}
+
+console.log(addNumber(1,2,3,4));
+
