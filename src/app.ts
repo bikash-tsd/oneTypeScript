@@ -1,42 +1,34 @@
-class Department {
-  private lastReport:string;
-  constructor(private name:string,private employee:string[],report:string ) {
-    this.lastReport =report
-  }
-
-  set mostResentReport (value:string){
-    this.lastReport = value;
-  }
-
-  get report (){
-    return this.lastReport
-  }
-
-  describe(){
-    console.log('department name: '+this.lastReport+ this.name);
-    
-  }
-  addEmployee(empName:string){
-    this.employee.push(empName)
-  }
-  printEmployee(){
-    console.log(this.employee.length,this.employee);
-    
-  }
-
-  static createEmployee(name:string){
-    return {name}
-  }
-
+interface admin  {
+    name:string
+    privilege:string[]
+}
+interface employee  {
+    name:string;
+    startDate:Date;
 }
 
+interface Bird  {
+    flyingSpeed :number
+}
+interface Horse {
+    runningSpeed : number
+}
+ 
+type Animal = Bird | Horse;
 
+function moveAnimal(animal:Animal) {
+    if('flyingSpeed' in animal) console.log('fly'+animal.flyingSpeed );
+    if('runningSpeed' in animal) console.log('run'+animal.runningSpeed );    
+}
 
-const dep = new Department('accounting',[],'reporting..');
+const para = document.getElementById('test1')! as HTMLElement ;
+para.innerHTML = 'test'
 
-dep.addEmployee('max');
-dep.addEmployee('dash');
-dep.printEmployee();
-dep.mostResentReport = 'test'
-console.log(Department.createEmployee('max'));
+interface ErrorInterface {
 
+    [props:string] : string;
+}
+
+const errorBeg:ErrorInterface = {
+    error :"not a valid emil"
+}
