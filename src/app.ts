@@ -7,4 +7,17 @@ const printOutPut = (a:number|string):void=>{
   
 }
 
-printOutPut(add(2))
+printOutPut(add(2));
+
+const hobby = ['sport','cooking'];
+const activeHobby = ['hiking'];
+activeHobby.push(...hobby);
+console.log(activeHobby);
+
+const person = {
+  name:'bikash',
+  age:29
+}
+const copyPerson = {...person};
+console.log(copyPerson);
+
