@@ -1,9 +1,6 @@
 class Department {
-  private name :string;
-  private employee:string[];
-  constructor(n:string) {
-    this.name = n;
-    this.employee =[];
+  constructor(private name:string,private employee:string[] ) {
+    
   }
   describe(){
     console.log('department name: '+this.name);
@@ -19,7 +16,13 @@ class Department {
 
 }
 
-const dep = new Department('accounting');
+class ITDepartment extends Department {
+  constructor(name:string, employee: string[]){
+    super(name,employee)
+  }
+}
+
+const dep = new Department('accounting',[]);
 
 dep.addEmployee('max');
 dep.addEmployee('dash');
