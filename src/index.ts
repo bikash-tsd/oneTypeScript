@@ -1,6 +1,2 @@
-import { ProjectInput } from './components/project-input';
-import { ProjectList } from './components/project-list';
-
-new ProjectInput();
-new ProjectList('active');
-new ProjectList('finished');
+const form = document.querySelector('form')! as HTMLFormElement;
+console.log('form');

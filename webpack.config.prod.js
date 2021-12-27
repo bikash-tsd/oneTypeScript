@@ -11,7 +11,7 @@ module.exports = {
     mode:'production',
     
     output: {
-        filename: '[name].bundle.js',
+        filename: 'bundle.js',
         path: DESTINATION,
         publicPath: '/build/js', 
     },
